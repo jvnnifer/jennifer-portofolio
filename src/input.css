@@ -1,0 +1,39 @@
+@import "tailwindcss/base";
+@import "tailwindcss/components";
+@import "tailwindcss/utilities";
+
+@layer utilities {
+  .enthusiast {
+    position: relative;
+    color: #e2e8f0;
+    font-size: 12vw;
+    text-transform: uppercase;
+    font-weight: 800;
+  }
+
+  .enthusiast::before {
+    content: "Constant Learner";
+    position: absolute;
+    color: rgb(22 163 74);
+    border-right: 2px solid rgb(22 163 74);
+    top: 0;
+    left: 0;
+    width: 0;
+    height: 100%;
+    overflow: hidden;
+    animation: animate 6s linear infinite;
+  }
+}
+
+@keyframes animate {
+  0% {
+    width: 0%;
+  }
+  70% {
+    width: 100%;
+  }
+}
+
+.animate {
+  animation: animate 6s linear infinite;
+}
