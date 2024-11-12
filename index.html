@@ -10,6 +10,15 @@
         scroll-behavior: smooth;
       }
     </style>
+    <script>
+      const menuButton = document.getElementById("menu-button");
+      const mobileMenu = document.getElementById("mobile-menu");
+
+      menuButton.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+        mobileMenu.classList.toggle("block");
+      });
+    </script>
   </head>
   <body>
     <header class="bg-transparent absolute top-0 left-0 w-full flex items-center z-10">
